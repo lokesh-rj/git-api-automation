@@ -1,0 +1,641 @@
+Request method:	POST
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/project/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "University of Chicago Press",
+    "url": "https://lokesh-test-jira.atlassian.net",
+    "projectTemplateKey": "com.atlassian.jira-core-project-templates:jira-core-simplified-process-control",
+    "avatarId": 10200,
+    "name": "Moab Is My WashpotBotticelli",
+    "assigneeType": "PROJECT_LEAD",
+    "projectTypeKey": "business",
+    "key": "LUC",
+    "leadAccountId": "5f3e32fa9aa9650046c73a2d"
+}
+HTTP/1.1 201 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:35 GMT
+ATL-TraceId: eff50f4a5680f48b
+X-AREQUESTID: 3526f12a-4706-4469-8f0a-dbaf8a4c02fd
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+Location: https://lokesh-test-jira.atlassian.net/rest/api/3/project/10043
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_69e005868e1f872a155ee3b5e9b852a6de0c9a46_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/project/10043",
+    "id": 10043,
+    "key": "LUC"
+}
+Request method:	POST
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "fields": {
+        "summary": "PallasAllan Cassin",
+        "issuetype": {
+            "id": "10002"
+        },
+        "project": {
+            "id": "10043"
+        },
+        "description": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "manateeHodkiewicz Inc1627289079",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+HTTP/1.1 201 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:37 GMT
+ATL-TraceId: b360d6fed9d25f33
+X-AREQUESTID: ff6d55a3-f38e-4705-9066-f58062642eda
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_7d0ecedcee920fbb1bfe09d0a8b9f7e9924fcacc_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "id": "10066",
+    "key": "LUC-1",
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10066"
+}
+Request method:	POST
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "fields": {
+        "summary": "PallasAllan Cassin",
+        "issuetype": {
+            "id": "10002"
+        },
+        "project": {
+            "id": "10043"
+        },
+        "description": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": "manateeHodkiewicz Inc1627289079",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+HTTP/1.1 201 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:37 GMT
+ATL-TraceId: 5881bceac375b536
+X-AREQUESTID: 70832b49-061f-4251-9e3b-cd77653c7bd9
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_c513c579ac3d2756ce48646e58c880108b403b90_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "id": "10067",
+    "key": "LUC-2",
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067"
+}
+Request method:	POST
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "After Many a Summer Dies the SwanPicasso",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+}
+HTTP/1.1 201 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:38 GMT
+ATL-TraceId: 8bc5bea41ffba8d4
+X-AREQUESTID: 7800601e-2695-4e5a-8ce8-c4e129fe897d
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+Location: https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10059
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_57f34d4d06a34e5bbbda5fce83c154e4700d6fdf_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10059",
+    "id": "10059",
+    "author": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "After Many a Summer Dies the SwanPicasso",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    },
+    "updateAuthor": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "created": "2020-08-21T00:28:38.485+0530",
+    "updated": "2020-08-21T00:28:38.485+0530",
+    "jsdPublic": true
+}
+Request method:	POST
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "After Many a Summer Dies the SwanPicasso",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+}
+HTTP/1.1 201 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:39 GMT
+ATL-TraceId: 6deca95ee775c0a7
+X-AREQUESTID: b3ad43a1-c6a6-4774-a13a-bd76e400cf7d
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+Location: https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_54ebc6e85e9d1cb15d511a3b0ea537b849e62862_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060",
+    "id": "10060",
+    "author": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "After Many a Summer Dies the SwanPicasso",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    },
+    "updateAuthor": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "created": "2020-08-21T00:28:38.987+0530",
+    "updated": "2020-08-21T00:28:38.987+0530",
+    "jsdPublic": true
+}
+Request method:	PUT
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "DAV",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+}
+HTTP/1.1 200 
+Server: AtlassianProxy/1.15.8.1
+Vary: Accept-Encoding
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:39 GMT
+ATL-TraceId: f1970a70ed8d01fc
+X-AREQUESTID: 71f5f8c8-3c20-4071-9819-ea92050cefc1
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+Location: https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_f77b5e793ee0282a7bd7062eee2f1e278032cf49_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060",
+    "id": "10060",
+    "author": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "DAV",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    },
+    "updateAuthor": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "created": "2020-08-21T00:28:38.987+0530",
+    "updated": "2020-08-21T00:28:39.593+0530",
+    "jsdPublic": true
+}
+Request method:	PUT
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "DAV",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+}
+HTTP/1.1 200 
+Server: AtlassianProxy/1.15.8.1
+Vary: Accept-Encoding
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:40 GMT
+ATL-TraceId: 588cfdeb4f3c7805
+X-AREQUESTID: 57e5c7ba-b138-4432-a261-01d8118086a4
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+Location: https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_12daad1b098c5a79bb0b4fdc0dd86e1a7e7ec018_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/issue/10067/comment/10060",
+    "id": "10060",
+    "author": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "text": "DAV",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    },
+    "updateAuthor": {
+        "self": "https://lokesh-test-jira.atlassian.net/rest/api/3/user?accountId=5f3e32fa9aa9650046c73a2d",
+        "accountId": "5f3e32fa9aa9650046c73a2d",
+        "emailAddress": "lokeshjhade18@gmail.com",
+        "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "24x24": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "16x16": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png",
+            "32x32": "https://secure.gravatar.com/avatar/6a6984ead44b159f19638d6f93f4f722?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FL-4.png"
+        },
+        "displayName": "Lokesh",
+        "active": true,
+        "timeZone": "Asia/Calcutta",
+        "accountType": "atlassian"
+    },
+    "created": "2020-08-21T00:28:38.987+0530",
+    "updated": "2020-08-21T00:28:40.054+0530",
+    "jsdPublic": true
+}
+Request method:	DELETE
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/project/10043
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 
+Server: AtlassianProxy/1.15.8.1
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:40 GMT
+ATL-TraceId: 8f6992a8eb275f5f
+X-AREQUESTID: b73218a7-b07c-49b5-9c92-1903debfd159
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+X-XSS-Protection: 1; mode=block
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_11db3068b8f38b9e1475b9dbad90682ba1cff64d_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+Request method:	DELETE
+Request URI:	https://lokesh-test-jira.atlassian.net/rest/api/3/project/10043
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 
+Server: AtlassianProxy/1.15.8.1
+Vary: Accept-Encoding
+Cache-Control: no-cache, no-store, no-transform
+Content-Type: application/json;charset=UTF-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+Date: Thu, 20 Aug 2020 18:58:41 GMT
+ATL-TraceId: d809065fe77c1a94
+X-AREQUESTID: 49137062-b14b-4fdf-9736-5a3cee276447
+X-AACCOUNTID: 5f3e32fa9aa9650046c73a2d
+X-XSS-Protection: 1; mode=block
+Transfer-Encoding: chunked
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+Micros-Issuer: micros/edge-authenticator
+Connection: keep-alive
+Set-Cookie: atlassian.xsrf.token=111dc104-c57c-4d62-a766-ca79a9fe9431_64025481423fa85d9943244f0acb7080f230c493_lin; Path=/; Secure
+Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+
+{
+    "errorMessages": [
+        "No project could be found with key '10043'."
+    ],
+    "errors": {
+        
+    }
+}

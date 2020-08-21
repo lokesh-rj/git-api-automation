@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="cucumber.Options.TestRunner" time="9.256" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="cucumber.Options.TestRunner" time="9.481" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9+181"/>
@@ -64,8 +64,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to create a project" time="3.058"/>
-  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to create a task for a project" time="1.866"/>
-  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to post a comment for a task" time="2.207"/>
-  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to update a comment for a task" time="2.125"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to create a project" time="3.812"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to create a task for a project" time="1.071"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to post a comment for a task" time="0.825"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to update a comment for a task" time="2.089"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to get the Project" time="0.796"/>
+  <testcase classname="Validating various Jira Cloud functionalites" name="Verify if user is able to delete the Project" time="0.888"/>
 </testsuite>

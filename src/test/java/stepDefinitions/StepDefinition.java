@@ -45,31 +45,23 @@ public class StepDefinition extends Utils {
 
 		resourceAPI = APIResources.valueOf(resource);
 
-		resSpec = new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
 		if (httpType.equalsIgnoreCase("POST")) {
-			if (resource.equalsIgnoreCase("postComment")) {
-				response = res.when().post(resourceAPI.getResource() + taskId + "/comment");
-			} else {
-				response = res.when().post(resourceAPI.getResource());
-			}
-		} else if (httpType.equalsIgnoreCase("GET")) {
+
+			response = res.when().post(resourceAPI.getResource());
+		}
+
+		else if (httpType.equalsIgnoreCase("GET")) {
 			response = res.when().get(resourceAPI.getResource());
 		} else if (httpType.equalsIgnoreCase("PUT")) {
-			if (resource.equalsIgnoreCase("updateComment")) {
-				response = res.when()
-						.put(resourceAPI.getResource() + taskId + "/comment/" +(commentId));
-			} else {
-				response = res.when().put(resourceAPI.getResource());
-			}
-		} else if (httpType.equalsIgnoreCase("DELETE")) {
-			response = res.when().delete(resourceAPI.getResource() +(projectId));
+			response = res.when().put(resourceAPI.getResource());
+		} else {
+			response = res.when().delete(resourceAPI.getResource());
 		}
 
 	}
 
 	@Then("the project gets created with the expected status code")
 	public void the_project_gets_created_with_status_code() {
-
 		assertEquals(response.getStatusCode(), 201);
 		projectId = getJsonPath(response, "id");
 		System.out.println("Id of the project is: " + projectId);
@@ -79,42 +71,38 @@ public class StepDefinition extends Utils {
 	public void create_Task_Payload() throws IOException {
 
 		res = given().spec(requestSpecification()).body(payLoad.createTaskPayLoad(projectId));
-		user_calls_with_http_request("createTask", "POST");
+
 	}
 
 	@Then("the task gets created with the expected status code")
 	public void the_task_gets_created_with_status_code() {
-
-		assertEquals(response.getStatusCode(), 201);
 		taskId = getJsonPath(response, "id");
 		taskKey = getJsonPath(response, "key");
-		System.out.println("Task ID is : " + taskId);
-		System.out.println("Task Key is : " + taskKey);
+		System.out.println("Task id is :" + taskId + " and Task Key is : " + taskKey);
+		assertEquals(response.getStatusCode(), 201);
 
 	}
 
 	@Given("Post Comment Payload")
 	public void post_Comment_Payload() throws IOException {
 
-		res = given().spec(requestSpecification()).body(payLoad.postAComment());
-		user_calls_with_http_request("postComment", "POST");
+		res = given().spec(requestSpecification()).pathParam("issueId", taskId).body(payLoad.postAComment());
 
 	}
 
 	@Then("the comment gets created with the expected status code")
 	public void the_comment_gets_created_with_status_code() {
-
-		assertEquals(response.getStatusCode(), 201);
 		commentId = getJsonPath(response, "id");
 		System.out.println("Comment ID is : " + commentId);
+		assertEquals(response.getStatusCode(), 201);
 
 	}
 
 	@Given("Update Comment Payload")
 	public void update_Comment_Payload() throws IOException {
 
-		res = given().spec(requestSpecification()).body(payLoad.updateComment());
-		user_calls_with_http_request("updateComment", "PUT");
+		res = given().spec(requestSpecification()).pathParam("issueId", taskId).pathParam("id", commentId)
+				.body(payLoad.updateComment());
 
 	}
 
@@ -122,21 +110,35 @@ public class StepDefinition extends Utils {
 	public void the_comment_gets_updated_with_status_code() {
 
 		assertEquals(response.getStatusCode(), 200);
-		commentId = getJsonPath(response, "id");
-		System.out.println("Comment ID update is : " + commentId);
+		System.out.println("Comment got updated succesfully");
 
 	}
 
-/*	@Given("Delete Project Payload")
-	public void delete_Project_Payload() throws IOException {
+	@Given("Get the project details")
+	public void get_the_project_details() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("projectId", projectId);
 
-		res = given().spec(requestSpecification());
-		user_calls_with_http_request("deleteProject", "DELETE");
 	}
 
-	@Then("the project gets deleted with status code {int}")
-	public void the_Project_gets_deleted_with_status_code(Integer statusCode) {
+	@Then("the response is successful with the expected status code")
+	public void the_response_is_successful_with_the_expected_status_code() throws IOException {
+		assertEquals(response.getStatusCode(), 200);
+		System.out.println("Get response is successful");
+	}
+
+	@Given("Delete the project details")
+	public void delete_the_project_details() throws IOException {
+
+		res = given().spec(requestSpecification()).pathParam("projectId", projectId);
+
+	}
+
+	@Then("the project gets deleted with the expected status code")
+	public void the_project_gets_deleted_with_the_expected_status_code() {
+
 		assertEquals(response.getStatusCode(), 204);
-	}*/
+		System.out.println("Deleted the project successfully!");
+
+	}
 
 }

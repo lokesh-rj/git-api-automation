@@ -22,8 +22,17 @@ Scenario: Verify if user is able to update a comment for a task
 	When user calls "updateComment" with "PUT" http request 
 	Then the comment gets updated with the expected status code 
 	
- 
-#Scenario: Verify if user is able to delete a Project
-#	Given Delete Project Payload 
-#	When user calls "deleteProject" with "DELETE" http request 
-	#Then the project gets deleted with status code 204
+	
+Scenario: Verify if user is able to get the Project 
+	Given Get the project details 
+	When user calls "getProject" with "GET" http request 
+	Then the response is successful with the expected status code 
+	
+Scenario: Verify if user is able to delete the Project 
+	Given Delete the project details 
+	When user calls "deleteProject" with "DELETE" http request 
+	Then the project gets deleted with the expected status code 
+	
+	
+	
+	

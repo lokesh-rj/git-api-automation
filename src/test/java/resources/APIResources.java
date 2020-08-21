@@ -5,9 +5,10 @@ public enum APIResources {
 
 	createProject("/rest/api/3/project/"),
 	createTask("/rest/api/3/issue/"), 
-	postComment("/rest/api/3/issue/"), 
-	updateComment("/rest/api/3/issue/"),
-	deleteProject("/rest/api/3/project/");
+	postComment("/rest/api/3/issue/{issueId}/comment"), 
+	updateComment("/rest/api/3/issue/{issueId}/comment/{id}"),
+	getProject("/rest/api/3/project/{projectId}"),
+	deleteProject("/rest/api/3/project/{projectId}");
 
 	private String resource;
 

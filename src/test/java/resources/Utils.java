@@ -21,22 +21,25 @@ import io.restassured.specification.RequestSpecification;
 
 public class Utils {
 
-	public static RequestSpecification req;
+	public static RequestSpecification reqSpec;
 
 	public RequestSpecification requestSpecification() throws IOException {
 		PreemptiveBasicAuthScheme auth = new PreemptiveBasicAuthScheme();
 		auth.setUserName(getGlobalValue("userName"));
 		auth.setPassword(getGlobalValue("password"));
+		
+		if(reqSpec==null) {
 
-		if (req == null) {
 			PrintStream log = new PrintStream(new FileOutputStream("Log.txt"));
 
-			req = new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).setAuth(auth)
+			reqSpec = new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).setAuth(auth)
 					.addFilter(RequestLoggingFilter.logRequestTo(log))
 					.addFilter(ResponseLoggingFilter.logResponseTo(log)).setContentType(ContentType.JSON).build();
-			return req;
+			System.out.println("Request spec is "+reqSpec);
 		}
-		return req;
+			return reqSpec;
+			
+
 
 	}
 

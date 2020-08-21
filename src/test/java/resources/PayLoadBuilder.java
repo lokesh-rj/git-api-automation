@@ -10,9 +10,9 @@ import pojo.CreateProject;
 
 public class PayLoadBuilder {
 	List<String> data;
+	Faker faker = new Faker();
 
-	public List<String> data() {
-		Faker faker = new Faker();
+	public PayLoadBuilder() {
 		data = new ArrayList<String>();
 		data.add(faker.book().title() + faker.artist().name() + faker.gameOfThrones().character());
 		data.add(faker.book().publisher());
@@ -20,12 +20,10 @@ public class PayLoadBuilder {
 		data.add(faker.ancient().titan() + faker.name().fullName());
 		data.add(faker.animal().name() + faker.app().author() + faker.hashCode());
 
-		return data;
-
 	}
 
 	public CreateProject createProjectPayLoad() throws IOException {
-		this.data();
+
 		CreateProject cp = new CreateProject();
 		cp.setUrl(Utils.getGlobalValue("baseUrl"));
 		cp.setAvatarId(Long.parseLong((Utils.getGlobalValue("avatarId"))));
@@ -41,7 +39,6 @@ public class PayLoadBuilder {
 	}
 
 	public String createTaskPayLoad(String projectID) {
-		this.data();
 
 		return "{\r\n" + "    \"fields\": {\r\n" + "        \"summary\": \"" + data.get(3) + "\",\r\n"
 				+ "        \"issuetype\": {\r\n" + "            \"id\": \"10002\"\r\n" + "        },\r\n"
@@ -57,7 +54,6 @@ public class PayLoadBuilder {
 	}
 
 	public String postAComment() {
-		this.data();
 
 		return "{\r\n" + "   \"body\": {\r\n" + "        \"type\": \"doc\",\r\n" + "        \"version\": 1,\r\n"
 				+ "        \"content\": [\r\n" + "            {\r\n" + "                \"type\": \"paragraph\",\r\n"
@@ -69,7 +65,7 @@ public class PayLoadBuilder {
 	}
 
 	public String updateComment() {
-		this.data();
+		// this.data();
 		return "{\r\n" + "    \"body\": {\r\n" + "        \"type\": \"doc\",\r\n" + "        \"version\": 1,\r\n"
 				+ "        \"content\": [\r\n" + "            {\r\n" + "                \"type\": \"paragraph\",\r\n"
 				+ "                \"content\": [\r\n" + "                    {\r\n"

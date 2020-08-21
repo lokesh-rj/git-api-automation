@@ -1,48 +1,55 @@
 package resources;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.github.javafaker.Faker;
 
 import pojo.CreateProject;
 
 public class PayLoadBuilder {
+	List<String> data;
 
-	public String[] data() {
+	public List<String> data() {
 		Faker faker = new Faker();
-		String[] data = { faker.book().title()+faker.artist().name(), faker.book().publisher(),
-				faker.name().firstName().substring(0, 3).toUpperCase(), faker.ancient().titan()+faker.name().fullName(),
-				faker.animal().name()+faker.app().author()+faker.hashCode() };
+		data = new ArrayList<String>();
+		data.add(faker.book().title() + faker.artist().name() + faker.gameOfThrones().character());
+		data.add(faker.book().publisher());
+		data.add(faker.name().firstName().substring(0, 3).toUpperCase());
+		data.add(faker.ancient().titan() + faker.name().fullName());
+		data.add(faker.animal().name() + faker.app().author() + faker.hashCode());
+
 		return data;
 
 	}
 
 	public CreateProject createProjectPayLoad() throws IOException {
+		this.data();
 		CreateProject cp = new CreateProject();
 		cp.setUrl(Utils.getGlobalValue("baseUrl"));
 		cp.setAvatarId(Long.parseLong((Utils.getGlobalValue("avatarId"))));
-		String[] data = data();
-		cp.setDescription(data[1]);
+		cp.setDescription(data.get(1));
 		cp.setProjectTemplateKey(Utils.getGlobalValue("projectTemplateKey"));
 		cp.setAssigneeType(Utils.getGlobalValue("assigneeType"));
 		cp.setLeadAccountId(Utils.getGlobalValue("leadAccountId"));
 		cp.setProjectTypeKey(Utils.getGlobalValue("projectTypeKey"));
-		cp.setName(data[0]);
-		cp.setKey(data[2]);
+		cp.setName(data.get(0));
+		cp.setKey(data.get(2));
 		return cp;
 
 	}
 
 	public String createTaskPayLoad(String projectID) {
-		String[] data = data();
+		this.data();
 
-		return "{\r\n" + "    \"fields\": {\r\n" + "        \"summary\": \"" + data[3] + "\",\r\n"
+		return "{\r\n" + "    \"fields\": {\r\n" + "        \"summary\": \"" + data.get(3) + "\",\r\n"
 				+ "        \"issuetype\": {\r\n" + "            \"id\": \"10002\"\r\n" + "        },\r\n"
 				+ "        \"project\": {\r\n" + "            \"id\": \"" + projectID + "\"\r\n" + "        },\r\n"
 				+ "        \"description\": {\r\n" + "            \"type\": \"doc\",\r\n"
 				+ "            \"version\": 1,\r\n" + "            \"content\": [\r\n" + "                {\r\n"
 				+ "                    \"type\": \"paragraph\",\r\n" + "                    \"content\": [\r\n"
-				+ "                        {\r\n" + "                            \"text\": \"" + data[4] + "\",\r\n"
+				+ "                        {\r\n" + "                            \"text\": \"" + data.get(4) + "\",\r\n"
 				+ "                            \"type\": \"text\"\r\n" + "                        }\r\n"
 				+ "                    ]\r\n" + "                }\r\n" + "            ]\r\n" + "        }\r\n"
 				+ "    }\r\n" + "}   ";
@@ -50,38 +57,26 @@ public class PayLoadBuilder {
 	}
 
 	public String postAComment() {
-		String[] data = data();
+		this.data();
 
 		return "{\r\n" + "   \"body\": {\r\n" + "        \"type\": \"doc\",\r\n" + "        \"version\": 1,\r\n"
 				+ "        \"content\": [\r\n" + "            {\r\n" + "                \"type\": \"paragraph\",\r\n"
 				+ "                \"content\": [\r\n" + "                    {\r\n"
-				+ "                        \"text\": \"" + data[0] + "\",\r\n"
+				+ "                        \"text\": \"" + data.get(0) + "\",\r\n"
 				+ "                        \"type\": \"text\"\r\n" + "                    }\r\n"
 				+ "                ]\r\n" + "            }\r\n" + "        ]\r\n" + "    }\r\n" + "}";
 
 	}
 
 	public String updateComment() {
-		
-		String[] data = data();
-		return "{\r\n" + 
-				"    \"body\": {\r\n" + 
-				"        \"type\": \"doc\",\r\n" + 
-				"        \"version\": 1,\r\n" + 
-				"        \"content\": [\r\n" + 
-				"            {\r\n" + 
-				"                \"type\": \"paragraph\",\r\n" + 
-				"                \"content\": [\r\n" + 
-				"                    {\r\n" + 
-				"                        \"text\": \""+data[2]+"\",\r\n" + 
-				"                        \"type\": \"text\"\r\n" + 
-				"                    }\r\n" + 
-				"                ]\r\n" + 
-				"            }\r\n" + 
-				"        ]\r\n" + 
-				"    }\r\n" + 
-				"}";
-			
+		this.data();
+		return "{\r\n" + "    \"body\": {\r\n" + "        \"type\": \"doc\",\r\n" + "        \"version\": 1,\r\n"
+				+ "        \"content\": [\r\n" + "            {\r\n" + "                \"type\": \"paragraph\",\r\n"
+				+ "                \"content\": [\r\n" + "                    {\r\n"
+				+ "                        \"text\": \"" + data.get(2) + "\",\r\n"
+				+ "                        \"type\": \"text\"\r\n" + "                    }\r\n"
+				+ "                ]\r\n" + "            }\r\n" + "        ]\r\n" + "    }\r\n" + "}";
+
 	}
 
 }

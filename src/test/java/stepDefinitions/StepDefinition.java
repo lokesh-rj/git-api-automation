@@ -56,18 +56,19 @@ public class StepDefinition extends Utils {
 			response = res.when().get(resourceAPI.getResource());
 		} else if (httpType.equalsIgnoreCase("PUT")) {
 			if (resource.equalsIgnoreCase("updateComment")) {
-				response = res.when().put(resourceAPI.getResource() + taskId + "/comment/"+Integer.parseInt(commentId));
+				response = res.when()
+						.put(resourceAPI.getResource() + taskId + "/comment/" +(commentId));
 			} else {
 				response = res.when().put(resourceAPI.getResource());
 			}
-		} else if(httpType.equalsIgnoreCase("DELETE")) {
-			response = res.when().delete(resourceAPI.getResource()+Integer.parseInt(projectId));
+		} else if (httpType.equalsIgnoreCase("DELETE")) {
+			response = res.when().delete(resourceAPI.getResource() +(projectId));
 		}
 
 	}
 
-	@Then("the project gets created with status code {int}")
-	public void the_project_gets_created_with_status_code(Integer statusCode) {
+	@Then("the project gets created with the expected status code")
+	public void the_project_gets_created_with_status_code() {
 
 		assertEquals(response.getStatusCode(), 201);
 		projectId = getJsonPath(response, "id");
@@ -81,8 +82,8 @@ public class StepDefinition extends Utils {
 		user_calls_with_http_request("createTask", "POST");
 	}
 
-	@Then("the task gets created with status code {int}")
-	public void the_task_gets_created_with_status_code(Integer statusCode) {
+	@Then("the task gets created with the expected status code")
+	public void the_task_gets_created_with_status_code() {
 
 		assertEquals(response.getStatusCode(), 201);
 		taskId = getJsonPath(response, "id");
@@ -100,8 +101,8 @@ public class StepDefinition extends Utils {
 
 	}
 
-	@Then("the comment gets created with status code {int}")
-	public void the_comment_gets_created_with_status_code(Integer statusCode) {
+	@Then("the comment gets created with the expected status code")
+	public void the_comment_gets_created_with_status_code() {
 
 		assertEquals(response.getStatusCode(), 201);
 		commentId = getJsonPath(response, "id");
@@ -117,8 +118,8 @@ public class StepDefinition extends Utils {
 
 	}
 
-	@Then("the comment gets updated with status code {int}")
-	public void the_comment_gets_updated_with_status_code(Integer statusCode) {
+	@Then("the comment gets updated with the expected status code")
+	public void the_comment_gets_updated_with_status_code() {
 
 		assertEquals(response.getStatusCode(), 200);
 		commentId = getJsonPath(response, "id");
@@ -126,18 +127,16 @@ public class StepDefinition extends Utils {
 
 	}
 
-	@Given("Delete Project Payload")
+/*	@Given("Delete Project Payload")
 	public void delete_Project_Payload() throws IOException {
 
 		res = given().spec(requestSpecification());
 		user_calls_with_http_request("deleteProject", "DELETE");
 	}
+
+	@Then("the project gets deleted with status code {int}")
+	public void the_Project_gets_deleted_with_status_code(Integer statusCode) {
+		assertEquals(response.getStatusCode(), 204);
+	}*/
+
 }
-//	@Then("the project gets deleted with status code {int}")
-//	public void the_Project_gets_deleted_with_status_code(Integer statusCode) {
-//
-//		assertEquals(response.getStatusCode(), 204);
-//
-//	}
-//
-//}

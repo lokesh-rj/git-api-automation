@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-20T18:58:28.484Z",
+        "start_timestamp": "2020-08-21T05:00:57.835Z",
         "line": 4,
         "name": "Verify if user is able to create a project",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1988477174,
+              "duration": 965864087,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2964305391,
+              "duration": 1826274887,
               "status": "passed"
             },
             "line": 6,
@@ -47,19 +47,13 @@
           },
           {
             "result": {
-              "duration": 615803847,
+              "duration": 240469470,
               "status": "passed"
             },
             "line": 7,
-            "name": "the project gets created with status code 201",
+            "name": "the project gets created with the expected status code",
             "match": {
-              "arguments": [
-                {
-                  "val": "201",
-                  "offset": 42
-                }
-              ],
-              "location": "StepDefinition.the_project_gets_created_with_status_code(Integer)"
+              "location": "StepDefinition.the_project_gets_created_with_status_code()"
             },
             "keyword": "Then "
           }
@@ -71,7 +65,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-20T18:58:34.078Z",
+        "start_timestamp": "2020-08-21T05:01:00.891Z",
         "line": 9,
         "name": "Verify if user is able to create a task for a project",
         "description": "",
@@ -81,7 +75,7 @@
         "steps": [
           {
             "result": {
-              "duration": 911512316,
+              "duration": 887136078,
               "status": "passed"
             },
             "line": 10,
@@ -93,7 +87,7 @@
           },
           {
             "result": {
-              "duration": 693850907,
+              "duration": 958565808,
               "status": "passed"
             },
             "line": 11,
@@ -115,26 +109,20 @@
           },
           {
             "result": {
-              "duration": 29742497,
+              "duration": 16196560,
               "status": "passed"
             },
             "line": 12,
-            "name": "the task gets created with status code 201",
+            "name": "the task gets created with the expected status code",
             "match": {
-              "arguments": [
-                {
-                  "val": "201",
-                  "offset": 39
-                }
-              ],
-              "location": "StepDefinition.the_task_gets_created_with_status_code(Integer)"
+              "location": "StepDefinition.the_task_gets_created_with_status_code()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2020-08-20T18:58:35.715Z",
+        "start_timestamp": "2020-08-21T05:01:02.754Z",
         "line": 15,
         "name": "Verify if user is able to post a comment for a task",
         "description": "",
@@ -144,7 +132,7 @@
         "steps": [
           {
             "result": {
-              "duration": 605753653,
+              "duration": 763769038,
               "status": "passed"
             },
             "line": 16,
@@ -156,7 +144,7 @@
           },
           {
             "result": {
-              "duration": 472149715,
+              "duration": 1438373227,
               "status": "passed"
             },
             "line": 17,
@@ -178,26 +166,20 @@
           },
           {
             "result": {
-              "duration": 24555234,
+              "duration": 9398618,
               "status": "passed"
             },
             "line": 18,
-            "name": "the comment gets created with status code 201",
+            "name": "the comment gets created with the expected status code",
             "match": {
-              "arguments": [
-                {
-                  "val": "201",
-                  "offset": 42
-                }
-              ],
-              "location": "StepDefinition.the_comment_gets_created_with_status_code(Integer)"
+              "location": "StepDefinition.the_comment_gets_created_with_status_code()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2020-08-20T18:58:36.819Z",
+        "start_timestamp": "2020-08-21T05:01:04.966Z",
         "line": 20,
         "name": "Verify if user is able to update a comment for a task",
         "description": "",
@@ -207,7 +189,7 @@
         "steps": [
           {
             "result": {
-              "duration": 563398739,
+              "duration": 779470381,
               "status": "passed"
             },
             "line": 21,
@@ -219,7 +201,7 @@
           },
           {
             "result": {
-              "duration": 433798046,
+              "duration": 1337922184,
               "status": "passed"
             },
             "line": 22,
@@ -241,66 +223,15 @@
           },
           {
             "result": {
-              "duration": 52052859,
+              "duration": 7456431,
               "status": "passed"
             },
             "line": 23,
-            "name": "the comment gets updated with status code 200",
+            "name": "the comment gets updated with the expected status code",
             "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 42
-                }
-              ],
-              "location": "StepDefinition.the_comment_gets_updated_with_status_code(Integer)"
+              "location": "StepDefinition.the_comment_gets_updated_with_status_code()"
             },
             "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-08-20T18:58:37.869Z",
-        "line": 26,
-        "name": "Verify if user is able to delete a Project",
-        "description": "",
-        "id": "validating-various-jira-cloud-functionalites;verify-if-user-is-able-to-delete-a-project",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 713556759,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "Delete Project Payload",
-            "match": {
-              "location": "StepDefinition.delete_Project_Payload()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 404125341,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user calls \"deleteProject\" with \"DELETE\" http request",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"deleteProject\"",
-                  "offset": 11
-                },
-                {
-                  "val": "\"DELETE\"",
-                  "offset": 32
-                }
-              ],
-              "location": "StepDefinition.user_calls_with_http_request(String,String)"
-            },
-            "keyword": "When "
           }
         ]
       }

@@ -1,4 +1,4 @@
-# git-api-automation
+#jira-api-automation
 
 JIRA Rest API Automation using Rest Assured and Cucumber Framework
 
